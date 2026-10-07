@@ -46,6 +46,10 @@ await page.locator('label:has-text("Phone:") + input').fill('1234567890');
 // 2. Target the textarea field next to the "Address:" label
 await page.locator('label:has-text("Address:") + textarea').fill('Pune Maharashtra');
 
+//By role
+
+const home = page.getByRole('link', { name: 'Home' }).first();
+await expect(home).toHaveText('Home');
 
 
 
